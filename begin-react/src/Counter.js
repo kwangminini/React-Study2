@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
-export default function Counter(){
-    const [num, setNum] = useState(0);
+
+function reducer(state, action){
+    switch(action.type){
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            throw new Error('Unhandled action');
+    }
+}
+
+function Counter(){
+    // const [num, setNum] = useState(0);
+    const [num, dispatch] = useReducer(reducer, 0);
     const onIncrease = () =>{
-        setNum(prevNum => prevNum + 1);
+        // setNum(prevNum => prevNum + 1);
+        dispatch({type: 'INCREMENT'});
+
     }
     function onDecrease(){
-        setNum(prevNum => prevNum - 1);
+        dispatch({type: 'DECREMENT'});
+        // setNum(prevNum => prevNum - 1);
     }
     return(
         <div>
@@ -16,3 +32,5 @@ export default function Counter(){
         </div>
     )
 }
+
+export default Counter;
