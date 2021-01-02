@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Counter from './Counter';
 import ContextSample from './ContextSample';
-
+import CounterClass from './CounterClass';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CounterClass />
   </React.StrictMode>,
   document.getElementById('root')
 );
