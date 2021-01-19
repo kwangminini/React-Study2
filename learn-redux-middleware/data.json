@@ -1,19 +1,19 @@
 {
-  "posts": [
+  "posts":[
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+        "id": 1,
+        "title": "리덕스 미들웨어를 배워봅시다.",
+        "body": "리덕스 미들웨어를 직접 만들어 봄"
+      },
+      {
+        "id": 2,
+        "title": "redux-thunk를 사용해보자",
+        "body": "redux-thunk를 사용해서 비동기 작업을 처리"
+      },
+      {
+        "id": 3,
+        "title": "redux-saga도 사용",
+        "body": "나중에 redux-saga를 사용해서 비동기 작업을 처리"
+      }
+]
 }
