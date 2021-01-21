@@ -8,6 +8,7 @@ import PostContainer from './containers/PostContainer';
 function App() {
   return (
     <>
+      <CounterContainer/>
       <Route path="/" exact component={PostListContainer}/>
       <Route path="/:id" component={PostPage}/>
     </>
