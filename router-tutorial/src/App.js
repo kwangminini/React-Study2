@@ -11,10 +11,11 @@ function App() {
       <Link to="/about">소개</Link>
       <Link to="/profiles">프로필 목록</Link>
       <Link to="/history">예제</Link>
+      <Link to="/pathTest"> 패스 테스트</Link>
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route path={["/about","/pathTest"]} component={About} />
           <Route path="/profiles" component={Profiles} />
           <Route path="/history" component={HistorySample} />
           <Route render={({location})=> (<div>
