@@ -7,3 +7,7 @@
 - 액션 타입은 대문자로 정의, 문자열 내용은 '모듈 이름/액션 이름' 같은 형태로 작성 (충돌 피하기 위해)
 - 액션 생성 함수는 export const increase = () => ({type:INCREASE}) 와 같이 export라는 키워드가 필요하다
 - 리듀서 함수에는 현재 상태를 참조하여 새로운 객체를 생성해서 반환하는 코드를 작성
+- createStore함수를 사용하여 Store를 만들 때는 리듀서를 하나만 사용해야 한다. 따라서 리덕스에서 제공하는 combineReducers라는 유틸 함수를 통해 기존에 만들었던 리듀서를 하나로 합쳐준다
+- Store를 만들고 리액트 애플리케이션에 리덕스를 적용하는 작업은 src 디렉터리의 index.js에서 이루어진다
+- 리액트 컴포넌트에서 Store를 사용할 수 있도록 App 컴포넌트를 react-redux에서 제공하는 Provider 컴포넌트로 감싸준다. 이 때 store를 props로 전달해준다
+- yarn add redux-devtools-extension 패키지의 composeWithDevTools()를 이용해 redux 개발자 도구 사용 가능
