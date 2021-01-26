@@ -11,3 +11,10 @@
 - Store를 만들고 리액트 애플리케이션에 리덕스를 적용하는 작업은 src 디렉터리의 index.js에서 이루어진다
 - 리액트 컴포넌트에서 Store를 사용할 수 있도록 App 컴포넌트를 react-redux에서 제공하는 Provider 컴포넌트로 감싸준다. 이 때 store를 props로 전달해준다
 - yarn add redux-devtools-extension 패키지의 composeWithDevTools()를 이용해 redux 개발자 도구 사용 가능
+- 컴포넌트를 리덕스와 연동하려면 react-redux에서 제공하는 connect 함수를 사용
+```
+connect(mapStateToProps, mapDispatchToProps)(연동할 컴포넌트)
+```
+- mapStateToProps : 리덕스 스토어 안의 상태를 컴포넌트의 props로 넘겨주기 위해 설정하는 함수
+- mapDispatchToProps : 액션 생성 함수를 컴포넌트의 props로 넘겨주기 위해 사용하는 함수
+- connect 함수를 호출하고 나면 또 다른 함수를 반환, 반환된 함수에 컴포넌트를 파라미터로 넣어주면 리덕스와 연동됨
