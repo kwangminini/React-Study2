@@ -48,4 +48,10 @@ dispatch
   결과 : {type: MY_ACTION, payload: 'hello world'}
   ```
 - 객체의 구조가 복잡해질 경우 immer를 사용하면 훨씬 편리하게 상태를 관리할 수 있다
+- 리덕스 스토어와 연동된 컨테이너 컴포넌트를 만들 때 connect 함수 대신 react-redux에서 제공하는 Hooks를 사용
+  - useSelector Hook을 사용하면 리덕스의 상태를 조회 
+  ```
+  const 결과 = useSelector(상태 선택 함수);
+  ```
+  - useDispatch Hook
   
