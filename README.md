@@ -40,4 +40,11 @@ dispatch
   initialState
   )
   ```
-  - createAction으로 액션을 
+  - createAction으로 액션을 만들면 액션에 필요한 추가 데이터는 payload라는 이름을 사용
+  ```
+  const MY_ACTION = 'sample/MY_ACTION';
+  const myAction = createAction(MY_ACTION);
+  const action = myAction('hello world');
+  결과 : {type: MY_ACTION, payload: 'hello world'}
+  ```
+  
