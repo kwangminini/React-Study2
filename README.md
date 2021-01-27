@@ -25,3 +25,19 @@ bindActionCreators(
 dispatch
 )
 ```
+- redux-actions를 사용하면 액션 생성 함수를 더 쉽게 작성 (리듀서를 작성할 때도 switch/case 문이 아닌 handleActions라는 함수를 사용하여 각 액션마다 업데이트 함수를 설정)
+  - createAction을 사용하면 매번 객체를 직접 만들어 줄 필요 없이 액션 생성 함수 선언 가능
+  ```
+  export const increase = createAction(INCREASE);
+  ```
+  - handleActions라는 함수를 이용하여 리듀서 함수도 간단하게 작성
+  ```
+  const counter = handleActions(
+  {
+    [INCREASE] : (state, action) => ({ number: state.number + 1 }),
+    [DECREASE] : (state, action) => ({ number: state.number - 1 })
+  },
+  initialState
+  )
+  ```
+  - createAction으로 액션을 
