@@ -53,5 +53,8 @@ dispatch
   ```
   const 결과 = useSelector(상태 선택 함수);
   ```
-  - useDispatch Hook
-  
+  - useDispatch Hook을 사용하면 스토어의 내장함수 dispatch를 사용할 수 있음
+  ```
+  const dispatch = useDispatch();
+  dispatch({ type: 'SAMPLE_ACTION' });
+  ```
