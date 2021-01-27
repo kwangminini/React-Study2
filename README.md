@@ -47,4 +47,5 @@ dispatch
   const action = myAction('hello world');
   결과 : {type: MY_ACTION, payload: 'hello world'}
   ```
+- 객체의 구조가 복잡해질 경우 immer를 사용하면 훨씬 편리하게 상태를 관리할 수 있다
   
