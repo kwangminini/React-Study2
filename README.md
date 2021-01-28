@@ -58,3 +58,12 @@ dispatch
   const dispatch = useDispatch();
   dispatch({ type: 'SAMPLE_ACTION' });
   ```
+  - useStore Hook을 사용하면 컴포넌트 내부에서 리덕스 스토어 객체를 직접 사용 가능 (단, 정말 긴급할 때만 사용)
+  ```
+  const store = useStore();
+  store.dispatch({ type: 'SAMPLE_ACTION' });
+  store.getState();
+  ```
+ - connect 함수와 useSelector 함수의 차이점
+   - connect 함수를 사용하여 컨테이너 컴포넌트를 만들었을 경우, 해당 컨테이너 컴포넌트의 부모 컴포넌트가 리렌더링될 때 해당 컨테이너 컴포넌트의 props가 바뀌지 않았다면 리렌더링이 자동으로 방지
+   - useSelector를 사용하여 리덕스 상태를 조회했을 떄는 이 최적화 작업이 자동으로 이루어지지 않으므로 성능 최적화를 위해서는 React.memon를 컨테이너 컴포넌트에 사용해줘야함 
