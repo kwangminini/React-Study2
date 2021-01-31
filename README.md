@@ -98,4 +98,21 @@ const middleware = store => next => action => {
   - redux-thunk 보다 사용하기 유리할 때
     - 기존 요청을 취소 처리해야 할 떄 (불필요한 중복 방지 요청)
     - 특정 액션이 발생했을 때 다른 액션을 발생시키거나, API 요청 등 리덕스와 관계없는 코드를 실행할 떄
+    - 웹소켓을 사용할 때
+    - API 요청 실패 시 재요청해야 할 떄
+  - redux-saga는 ES6의 제너레이터 함수를 사용
+  - redux-saga는 우리가 디스패치하는 액션을 모니터링해서 그에 따라 필요한 작업을 따로 수행할 수 있는 미들웨어
+  - rootSaga
+  ```
+  export function* rootSaga(){
+    yield all([saga()]);
+  }
+  ```
+  - store에 redux-saga 미들웨어 적용
+  ```
+  const sagaMiddleware = createSagaMiddleware();
+  const store = createStore(
+    rootReducer, applyMiddleware(logger,sagaMiddleware);
+  )
+  ```
     
