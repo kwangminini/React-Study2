@@ -83,7 +83,7 @@ const middleware = store => next => action => {
 - 미들웨어 종류 2가지(redux-thunk / redux-saga)
   - redux-thunk : 비동기 작업을 처리할 때 가장 많이 사용하는 미들웨어. 객체가 아닌 함수 형태의 액션을 디스패치 할 수 있게 해줌
   - redux-saga : redux-thunk 다음으로 가장 많이 사용되는? 비동기 작업 관련 미들웨어 라이브러리. 특정 액션이 디스패치 되었을 때 정해진 로직에 따라 다른 액션을 디스패치시키는 규칙을 작성하여 비동기 작업을 처리할 수 있게 해줌
-- *redux-thunk*
+- **redux-thunk**
   - 리덕스를 사용하는 프로젝트에서 비동기 작업을 처리할 때 가장 기본적으로 사용하는 미들웨어
   - Thunk는 특정 작업을 나중에 할 수 있도록 미루기 위해 함수 형태로 감싼 것
   - redux-thunk 라이브러리를 사용하면 thunk함수를 만들어서 디스패치할 수 있다.
@@ -94,7 +94,7 @@ const middleware = store => next => action => {
   ```
   - 액션 생성 함수에서 일반 액션 객체를 반환하는 대신에 함수를 반환
 - API를 호출할 때는 주로 Promise 기반 웹 클라이언트인 axios 라이브러리를 사용하면 편함
-- *redux-saga*
+- **redux-saga**
   - redux-thunk 보다 사용하기 유리할 때
     - 기존 요청을 취소 처리해야 할 떄 (불필요한 중복 방지 요청)
     - 특정 액션이 발생했을 때 다른 액션을 발생시키거나, API 요청 등 리덕스와 관계없는 코드를 실행할 떄
@@ -124,5 +124,5 @@ const middleware = store => next => action => {
   yield throttle(3000, INCREASE_ASYNC, increaseSaga);
   ```
 
-- *정리:* redux-thunk는 일반 함수로 이루어져 있어 간단명료, redux-saga는 진입 장벽이 좀 있을 수 있으나 복잡한 상황에서 더욱 효율적
+- **정리:** redux-thunk는 일반 함수로 이루어져 있어 간단명료, redux-saga는 진입 장벽이 좀 있을 수 있으나 복잡한 상황에서 더욱 효율적
     
