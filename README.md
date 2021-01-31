@@ -96,4 +96,4 @@ const middleware = store => next => action => {
 - API를 호출할 때는 주로 Promise 기반 웹 클라이언트인 axios 라이브러리를 사용하면 편함
 - *redux-saga*
   - redux-thunk 보다 사용하기 유리할 때
-    - 
+    - 기존 요청을 취소 처리해야 할 떄
