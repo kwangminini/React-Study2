@@ -95,4 +95,5 @@ const middleware = store => next => action => {
   - 액션 생성 함수에서 일반 액션 객체를 반환하는 대신에 함수를 반환
 - API를 호출할 때는 주로 Promise 기반 웹 클라이언트인 axios 라이브러리를 사용하면 편함
 - *redux-saga*
- 
+  - redux-thunk 보다 사용하기 유리할 때
+    - 
