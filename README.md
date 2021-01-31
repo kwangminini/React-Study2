@@ -115,4 +115,14 @@ const middleware = store => next => action => {
     rootReducer, applyMiddleware(logger,sagaMiddleware);
   )
   ```
+  - saga내부에서 현재 상태를 참조해야 하는 상황이 생길 때 select 사용
+  ```
+  const number = yield select(state => state.counter) //state는 스토어 상태를 의미
+  ```
+  - takeEvery 대신 throttle이라는 함수를 사용하면 saga가 n초에 단 한 번만 호출되도록 설정
+  ```
+  yield throttle(3000, INCREASE_ASYNC, increaseSaga);
+  ```
+
+- *정리:* redux-thunk는 일반 함수로 이루어져 있어 간단명료, redux-saga는 진입 장벽이 좀 있을 수 있으나 복잡한 상황에서 더욱 효율적
     
