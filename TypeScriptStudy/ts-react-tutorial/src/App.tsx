@@ -5,6 +5,7 @@ import Greetings from './Greetings';
 import MyForm from './MyForm';
 import Counter from './Counter';
 import ReducerSample from './ReducerSample';
+import { SampleProvider } from './SampleContext';
 function App() {
   const onClick = (name:string) => {console.log(name);}
   const onSubmit = (form:{name:string; description: string})=>{
@@ -12,7 +13,9 @@ function App() {
   }
   return (
     // <MyForm onSubmit={onSubmit}/>
-    <ReducerSample/>
+    <SampleProvider>
+      <ReducerSample/>
+    </SampleProvider>
   );
 }
 
