@@ -4,6 +4,7 @@ import './App.css';
 import Greetings from './Greetings';
 import MyForm from './MyForm';
 import Counter from './Counter';
+import ReducerSample from './ReducerSample';
 function App() {
   const onClick = (name:string) => {console.log(name);}
   const onSubmit = (form:{name:string; description: string})=>{
@@ -11,7 +12,7 @@ function App() {
   }
   return (
     // <MyForm onSubmit={onSubmit}/>
-    <Counter/>
+    <ReducerSample/>
   );
 }
 
