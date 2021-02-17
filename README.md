@@ -127,3 +127,4 @@ const middleware = store => next => action => {
 - **정리:** redux-thunk는 일반 함수로 이루어져 있어 간단명료, redux-saga는 진입 장벽이 좀 있을 수 있으나 복잡한 상황에서 더욱 효율적
     
 ## Typescript
+- type 
