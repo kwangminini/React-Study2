@@ -6,7 +6,7 @@ import TodoApp from './containers/TodoApp';
 
 function App() {
   return (
-    <CounterContainer/>
+    <TodoApp/>
   );
 }
 
