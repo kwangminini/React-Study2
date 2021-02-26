@@ -7,11 +7,10 @@ type GithubProfileInfoProps = {
     bio: string;
     blog: string;
 }
-
 function GithubProfileInfo( { name, thumbnail, bio, blog}: GithubProfileInfoProps ){
     return (
-        <div>
-            <div>
+        <div className="GithubProfileInfo">
+            <div className="profile-head">
                 <img src = {thumbnail} alt = "user thumbnail"/>
                 <div>{name}</div>
             </div>
@@ -20,3 +19,5 @@ function GithubProfileInfo( { name, thumbnail, bio, blog}: GithubProfileInfoProp
         </div>
     )
 }
+
+expect default GithubProfileInfo;
