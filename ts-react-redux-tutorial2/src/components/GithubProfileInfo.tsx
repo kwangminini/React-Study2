@@ -20,4 +20,4 @@ function GithubProfileInfo( { name, thumbnail, bio, blog}: GithubProfileInfoProp
     )
 }
 
-expect default GithubProfileInfo;
+export default GithubProfileInfo;
