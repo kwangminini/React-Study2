@@ -2,11 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CounterContainer from './containers/CounterContainer';
-import TodoApp from './containers/TodoApp';
-
-function App() {
+// import TodoApp from './containers/TodoApp';
+import GithubProfileLoader from './containers/GithubProfileLoader';
+const App: React.FC = () => {
   return (
-    <TodoApp/>
+    // <TodoApp/>
+    <GithubProfileLoader/>
   );
 }
 
