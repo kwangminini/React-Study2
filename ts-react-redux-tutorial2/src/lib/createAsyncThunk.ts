@@ -5,5 +5,7 @@ type AnyAscyncActionCreator = AsyncActionCreator<any, any, any>;
 type AnyPromiseCreator = (...params: any[]) => Promise<any>;
 
 export default function createAsyncThunk<A extends AnyAscyncActionCreator, F extends AnyPromiseCreator>(
-    
-)
+    asyncActionCreator: A, promiseCreator: F
+){
+    type Params = Parameters<F>;
+}
