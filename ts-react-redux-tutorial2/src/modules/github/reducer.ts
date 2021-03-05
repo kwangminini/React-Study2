@@ -21,7 +21,7 @@ import { asyncState, createAsyncReducer, transformToArray } from '../../lib/redu
 //         ...state,
 //         userProfile: asyncState.error(action.payload)
 //     })
-//  });
+//  }); update 
 
 const github = createReducer<GithubState, GithubAction>(
     initialSate
