@@ -128,3 +128,11 @@ const middleware = store => next => action => {
     
 ## Typescript
 - type 
+
+## Webpack
+
+- Module의 종류
+  - Built-in Core Module (예: Node.js module)
+  - community-based Module (예: NPM)
+    - npm CLI를 사용해야 함(예: npm install ModuleName)
+  - Local Module (특정 프로젝트에 정의된 모듈)
