@@ -136,3 +136,8 @@ const middleware = store => next => action => {
   - community-based Module (예: NPM)
     - npm CLI를 사용해야 함(예: npm install ModuleName)
   - Local Module (특정 프로젝트에 정의된 모듈)
+
+- Module을 사용한다면
+  - 코드의 재사용성이 증가
+  - 코드의관리가 편해진다
+  - 코드를 모듈화하는 기준이 명확해야 함
