@@ -128,3 +128,21 @@ const middleware = store => next => action => {
     
 ## Typescript
 - type 
+
+## Webpack
+
+- Module의 종류
+  - Built-in Core Module (예: Node.js module)
+  - community-based Module (예: NPM)
+    - npm CLI를 사용해야 함(예: npm install ModuleName)
+  - Local Module (특정 프로젝트에 정의된 모듈)
+
+- Module을 사용한다면
+  - 코드의 재사용성이 증가
+  - 코드의관리가 편해진다
+  - 코드를 모듈화하는 기준이 명확해야 함
+
+- Bundle
+  - 모든 모듈을 로드하기 위해 검색하는 시간이 단축
+  - 사용하지 않는 코드를 제거
+  - 파일의 크기를 줄여줌
