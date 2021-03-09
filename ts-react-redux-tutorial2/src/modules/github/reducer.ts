@@ -16,7 +16,7 @@ import { asyncState, createAsyncReducer, transformToArray } from '../../lib/redu
 //     [GET_USER_PROFILE_SUCCESS] : (state, action) => ({
 //         ...state,
 //         userProfile: asyncState.success(action.payload)
-//     }),
+//     }), 
 //     [GET_USER_PROFILE_ERROR] : (state, action) => ({
 //         ...state,
 //         userProfile: asyncState.error(action.payload)
@@ -29,7 +29,6 @@ const github = createReducer<GithubState, GithubAction>(
     transformToArray(getUserProfileAsync),
     createAsyncReducer(getUserProfileAsync, 'userProfile')
 );
-
 
 
  export default github;
