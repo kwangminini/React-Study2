@@ -146,3 +146,5 @@ const middleware = store => next => action => {
   - 모든 모듈을 로드하기 위해 검색하는 시간이 단축
   - 사용하지 않는 코드를 제거
   - 파일의 크기를 줄여줌
+
+- WebPack의 기본구조
