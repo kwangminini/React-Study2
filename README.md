@@ -148,3 +148,6 @@ const middleware = store => next => action => {
   - 파일의 크기를 줄여줌
 
 - WebPack의 기본구조
+  - Entry: 모듈의 의존 관계를 이해하기 위한 시작점을 설정
+  - Output : Webpack이 생성하는 번들 파일에 대한 정보를 설정
+ 
